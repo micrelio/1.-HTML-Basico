@@ -8,22 +8,30 @@
     <title>Estilos CSS</title>
 
     <style>
-        section{
+        section {
             background-color: red;
             padding: 50px 50px 50px 50px;
         }
-        div{
+
+        div {
+            background-image: url("./img/fondo.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
             background-color: yellow;
+            background-size: cover;
             padding: 10px 10px 10px 10px;
         }
+
         h1 {
             color: red;
             margin: 10px 10px 10px 10px;
         }
-        hr{
-height: 5px;
-background-color: orangered;
+
+        hr {
+            height: 5px;
+            background-color: orangered;
         }
+
         h2 {
             text-align: center;
             border: 3px solid black;
@@ -31,19 +39,42 @@ background-color: orangered;
             margin-left: 50px;
             color: blueviolet;
         }
-        h3{
+
+        h3 {
             margin-top: 50px;
         }
-        h4{
+
+        h4 {
             margin-bottom: 30px;
         }
-        p{
 
-        }
-        .clase{
+        p {}
+
+        .clase {
             font-family: Courier, "Lucida Console", monospace;
             font-size: 20px;
             font-weight: bold;
+        }
+
+        .seccionSegunda {
+            background-color: greenyellow;
+            /* padding: 50px;
+            height: 50px; */
+            /* overflow: hidden; */
+            /* background-image: url("./img/coco.png"); */
+
+        }
+        .divSegundo{
+            width: 25%;
+            /* height: 30px; */
+            border: 3px dotted black;
+            /* float: left; */
+            margin: 5px;
+
+        }
+
+        img {
+            width: 100px;
         }
     </style>
 </head>
@@ -63,6 +94,20 @@ background-color: orangered;
             <a href="html2.html">Clase 3</a>
         </div>
     </section>
+    <section class="seccionSegunda">
+        <div class="divSegundo">
+            <h1>Esto es un coco</h1>
+            <p>El coco es un alimento</p>
+            <img src="./img/coco.png" alt="">
+        </div>
+
+        <div class="divSegundo">
+            <h1>Esto es una uva</h1>
+            <p>La uva es un alimento</p>
+            <img src="./img/uva.png" alt="">
+        </div>
+    </section>
+
 </body>
 
 </html>
