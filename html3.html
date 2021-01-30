@@ -17,6 +17,7 @@
             vertical-align: baseline;
             width: 100%;
             min-height: 100%;
+            /* background-color: gray; */
             /*Diseños por defecto para quitar los margernes preestablecidos en la web */
             background-image: url("img/dots.jpg");
             /* Imagen de fondo no tapa el contenido */
@@ -25,10 +26,7 @@
         }
 
 
-        div {
-           
-        
-        }
+        div {}
 
         h1 {
             color: red;
@@ -36,16 +34,36 @@
             /*Margen externo*/
         }
 
+        h2 {
+            color: black;
+            /* margin: 10px 10px 10px 10px; */
+            /*Margen externo*/
+            margin: 0px;
+        }
+
+        hr {
+            background-color: black;
+            height:  2px;
+            border: none;
+        }
+
 
 
 
         section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             background-color: wheat;
             min-height: 100px;
             margin: 10px 0px 10px 0px;
+            border: 2px solid black;
+
+
         }
 
-       .item {
+        .item {
             /* Así alineamos los numeros dentro de los div */
             display: flex;
             flex-direction: row;
@@ -62,11 +80,13 @@
         }
 
         .rowCenter {
-            width: 100%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            background-color: whitesmoke;
+            width: 100%;
+
         }
 
         .rowStart {
@@ -74,6 +94,8 @@
             flex-direction: row;
             align-items: center;
             justify-content: flex-start;
+            background-color: whitesmoke;
+            width: 100%;
         }
 
         .rowEnd {
@@ -81,13 +103,32 @@
             flex-direction: row;
             align-items: center;
             justify-content: flex-end;
+            background-color: whitesmoke;
+            width: 100%;
         }
-
+        .spaceArround {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;/* Con esto se puede centrar uno solo */
+            background-color: whitesmoke;
+            width: 100%;
+        }
+        .spaceBetwin {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: whitesmoke;
+            width: 100%;
+        }
         .column {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
+            background-color: whitesmoke;
+            width: 100%;
 
         }
     </style>
@@ -95,8 +136,8 @@
 
 <body>
     <h1>Display flex</h1>
-    
-    <section >
+
+    <section>
         <h2>Centrado</h2>
         <hr>
         <div class="rowCenter">
@@ -113,22 +154,12 @@
     </section>
 
 
-    <section class="rowStart">
-        <h2></h2>
-        <div class="item">
-            <h3>1</h3>
-        </div>
-        <div class="item">
-            <h3>2</h3>
-        </div>
-        <div class="item">
-            <h3>3</h3>
-        </div>
-    </section>
+    <section class="">
+        <h2>Centrado al inicio</h2>
+        <hr>
+        <div class="rowStart">
 
-    <section class="rowEnd">
-        <h2></h2>
-        <div class="item">
+                <div class="item">
             <h3>1</h3>
         </div>
         <div class="item">
@@ -137,11 +168,15 @@
         <div class="item">
             <h3>3</h3>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="column">
-        <h2></h2>
-        <div class="item">
+    <section class="">
+        <h2>Centrado al final</h2>
+        <hr>
+        <div class="rowEnd">
+
+                <div class="item">
             <h3>1</h3>
         </div>
         <div class="item">
@@ -150,11 +185,63 @@
         <div class="item">
             <h3>3</h3>
         </div>
-    </section>
+    </div>
+</section>
+
+<section class="">
+    <h2>Espacio alrrededor</h2>
+    <hr>
+    <div class="spaceArround">
+
+            <div class="item">
+        <h3>1</h3>
+    </div>
+    <div class="item">
+        <h3>2</h3>
+    </div>
+    <div class="item">
+        <h3>3</h3>
+    </div>
+</div>
+</section>
+
+<section class="">
+    <h2>Espacio alrrededor</h2>
+    <hr>
+    <div class="spaceBetwin">
+
+            <div class="item">
+        <h3>1</h3>
+    </div>
+    <div class="item">
+        <h3>2</h3>
+    </div>
+    <div class="item">
+        <h3>3</h3>
+    </div>
+</div>
+</section>
+
+    <section class="">
+        <h2>Columna</h2>
+        <hr>
+        <div class="column">
+
+                <div class="item">
+            <h3>1</h3>
+        </div>
+        <div class="item">
+            <h3>2</h3>
+        </div>
+        <div class="item">
+            <h3>3</h3>
+        </div>
+    </div>
+</section>
 
     <section class="seccionSegunda">
-        <h2></h2>
-        <div class="item">
+        <h2>Centrado</h2>
+        <hr>        <div class="item">
             <h3>1</h3>
         </div>
         <div class="item">
