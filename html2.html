@@ -6,11 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- -->
     <title>Estilos CSS</title>
-
+    <!--Para dar estilos y maquetados tenemos que agregar las estiquetas style -->
     <style>
+        /* esto es un comentario en css */
+        /* Podemos dar estilos a las etiquetas poniendo su nombre y entre las llaves comenzaremos */
+        /* Todas las etiquetas se agregaran a las que tengan el mismo nombre */
+        body {
+            background-image: url("img/dots.jpg");
+            background-attachment: fixed;
+        }
+
         section {
-            background-color: red;
             padding: 50px 50px 50px 50px;
+
         }
 
         div {
@@ -50,6 +58,9 @@
 
         p {}
 
+        /* Se oueden crear clases declarando en la etiqueta */
+        /* Hemos agregado estilo al nombre de la etiqueta antes eso hará que todas las etiquetas con el mismo nombre tengan el mismo estilo si 
+añadimos estilos distintos los anteriores cambiaran pero el que no cambiemos se mantendrá  */
         .clase {
             font-family: Courier, "Lucida Console", monospace;
             font-size: 20px;
@@ -58,19 +69,12 @@
 
         .seccionSegunda {
             background-color: greenyellow;
-            /* padding: 50px;
-            height: 50px; */
-            /* overflow: hidden; */
-            /* background-image: url("./img/coco.png"); */
-
         }
-        .divSegundo{
-            width: 25%;
-            /* height: 30px; */
-            border: 3px dotted black;
-            /* float: left; */
-            margin: 5px;
 
+        .divSegundo {
+            width: 25%;
+            border: 3px dotted black;
+            margin: 5px;
         }
 
         img {
@@ -89,9 +93,6 @@
             <h4>Estilos CSS</h4>
             <p>otro parrafo para que veas el cambio de uno a otro</p>
             <p class="clase">otro parrafo para que veas el cambio de uno a otro</p>
-            <a href="https://microdeveloper.es/">Pagina Externa</a>
-            <br>
-            <a href="html2.html">Clase 3</a>
         </div>
     </section>
     <section class="seccionSegunda">
@@ -106,6 +107,8 @@
             <p>La uva es un alimento</p>
             <img src="./img/uva.png" alt="">
         </div>
+        <a href="html3.html">Clase 3</a>
+
     </section>
 
 </body>
