@@ -1,4 +1,4 @@
-<!--En esta pagina veremos los estilos CSS como darle color y maquetar las etiquetas utilizadas-->
+<!--En esta pagina aprenderemos como funciona display flex-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,23 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- -->
     <title>Estilos CSS</title>
-    <!--Para dar estilos y maquetados tenemos que agregar las estiquetas style -->
     <style>
-        /* esto es un comentario en css */
-        /* Podemos dar estilos a las etiquetas poniendo su nombre y entre las llaves comenzaremos */
-        /* Todas las etiquetas se agregaran a las que tengan el mismo nombre */
+        html,
         body {
+            /*Diseños por defecto para quitar los margernes preestablecidos en la web */
+            margin: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            width: 100%;
+            min-height: 100%;
+            /*Diseños por defecto para quitar los margernes preestablecidos en la web */
             background-image: url("img/dots.jpg");
             /* Imagen de fondo no tapa el contenido */
             background-attachment: fixed;
             /* Hace a la imagen un efecto estatico */
         }
 
-        section {
-            padding: 50px 50px 50px 50px;
-            /* Esto es para crear un margen interno distinto en cada lateral*/
-
-        }
 
         div {
             background-image: url("./img/fondo.jpg");
@@ -41,86 +42,205 @@
             /*Margen externo*/
         }
 
-        hr {
-            height: 5px;
-            /* Tamaño alto */
-            background-color: orangered;
-        }
 
-        h2 {
-            text-align: center;
-            border: 3px solid black;
-            border-radius: 25px;
-            margin-left: 50px;
-            /*Margen por laterales, aplicable a padding*/
-            color: blueviolet;
-        }
 
-        h3 {
-            margin-top: 50px;
-        }
 
-        h4 {
-            margin-bottom: 30px;
-        }
-
-        p {
-            font-style: italic;
-        }
-
-        /* Se oueden crear clases declarando en la etiqueta */
-        /* Hemos agregado estilo al nombre de la etiqueta antes eso hará que todas las etiquetas con el mismo nombre tengan el mismo estilo si 
-añadimos estilos distintos los anteriores cambiaran pero el que no cambiemos se mantendrá  */
-        .clase {
-            font-family: Courier, "Lucida Console", monospace;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .seccionSegunda {
+        section {
             background-color: wheat;
+            min-height: 100px;
+            margin: 10px 0px 10px 0px;
         }
 
-        .divSegundo {
-            width: 25%;
-            border: 3px dotted black;
+        div {
+            /* Así alineamos los numeros dentro de los div */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 20%;
+            height: 20px;
+            border: 3px double black;
             margin: 5px;
         }
 
-        img {
-            width: 100px;
+        .rowCenter {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rowStart {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .rowEnd {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
         }
     </style>
 </head>
 
 <body>
-    <section>
-        <div>
-            <h1>Estilos CSS</h1>
-            <hr>
-            <h2>Estilos CSS</h2>
-            <h3>Estilos CSS</h3>
-            <h4>Estilos CSS</h4>
-            <p>otro parrafo para que veas el cambio de uno a otro</p>
-            <p class="clase">otro parrafo para que veas el cambio de uno a otro</p>
+    <h1>Display flex</h1>
+    <section class="rowCenter">
+        <h2></h2>
+        <div class="">
+            <h3>1</h3>
+        </div>
+        <div class="">
+            <h3>2</h3>
+        </div>
+        <div class="">
+            <h3>3</h3>
+        </div>
+    </section>
+
+
+    <section class="rowStart">
+        <h2></h2>
+        <div class="">
+            <h3>1</h3>
+        </div>
+        <div class="">
+            <h3>2</h3>
+        </div>
+        <div class="">
+            <h3>3</h3>
+        </div>
+    </section>
+
+    <section class="rowEnd">
+        <h2></h2>
+        <div class="">
+            <h3>1</h3>
+        </div>
+        <div class="">
+            <h3>2</h3>
+        </div>
+        <div class="">
+            <h3>3</h3>
+        </div>
+    </section>
+
+    <section class="column">
+        <h2></h2>
+        <div class="">
+            <h3>1</h3>
+        </div>
+        <div class="">
+            <h3>2</h3>
+        </div>
+        <div class="">
+            <h3>3</h3>
+        </div>
+    </section>
+
+    <section class="seccionSegunda">
+        <h2></h2>
+        <div class="">
+            <h3>1</h3>
+        </div>
+        <div class="">
+            <h3>2</h3>
+        </div>
+        <div class="">
+            <h3>3</h3>
+        </div>
+        <div class="">
+            <h3>4</h3>
+        </div>
+        <div class="">
+            <h3>5</h3>
+        </div>
+        <div class="">
+            <h3>6</h3>
+        </div>
+        <div class="">
+            <h3>7</h3>
+        </div>
+        <div class="">
+            <h3>8</h3>
+        </div>
+        <div class="">
+            <h3>9</h3>
+        </div>
+        <div class="">
+            <h3>10</h3>
         </div>
     </section>
     <section class="seccionSegunda">
-        <div class="divSegundo">
-            <h1>Esto es un coco</h1>
-            <p>El coco es un alimento</p>
-            <img src="./img/coco.png" alt="">
+        <h2></h2>
+        <div class="">
+            <h3>1</h3>
         </div>
-
-        <div class="divSegundo">
-            <h1>Esto es una uva</h1>
-            <p>La uva es un alimento</p>
-            <img src="./img/uva.png" alt="">
+        <div class="">
+            <h3>2</h3>
         </div>
-        <a href="html3.html">Clase 3</a>
-
+        <div class="">
+            <h3>3</h3>
+        </div>
+        <div class="">
+            <h3>4</h3>
+        </div>
+        <div class="">
+            <h3>5</h3>
+        </div>
+        <div class="">
+            <h3>6</h3>
+        </div>
+        <div class="">
+            <h3>7</h3>
+        </div>
+        <div class="">
+            <h3>8</h3>
+        </div>
+        <div class="">
+            <h3>9</h3>
+        </div>
+        <div class="">
+            <h3>10</h3>
+        </div>
+    </section>
+    <section class="seccionSegunda">
+        <h2></h2>
+        <div class="">
+            <h3>1</h3>
+        </div>
+        <div class="">
+            <h3>2</h3>
+        </div>
+        <div class="">
+            <h3>3</h3>
+        </div>
+        <div class="">
+            <h3>4</h3>
+        </div>
+        <div class="">
+            <h3>5</h3>
+        </div>
+        <div class="">
+            <h3>6</h3>
+        </div>
+        <div class="">
+            <h3>7</h3>
+        </div>
+        <div class="">
+            <h3>8</h3>
+        </div>
+        <div class="">
+            <h3>9</h3>
+        </div>
+        <div class="">
+            <h3>10</h3>
+        </div>
     </section>
 
+    <a href="html4.html">Clase 3</a>
 </body>
 
 </html>
