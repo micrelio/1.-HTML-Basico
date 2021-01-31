@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- -->
     <title>Estilos CSS</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         html,
         body {
             /*Diseños por defecto para quitar los margernes preestablecidos en la web */
@@ -19,22 +23,27 @@
             min-height: 100%;
             /* background-color: gray; */
             /*Diseños por defecto para quitar los margernes preestablecidos en la web */
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             background-image: url("img/dots.jpg");
             /* Imagen de fondo no tapa el contenido */
             background-attachment: fixed;
             /* Hace a la imagen un efecto estatico */
         }
 
-
-        div {}
-
         h1 {
+            text-align: center;
+
             color: red;
             margin: 10px 10px 10px 10px;
             /*Margen externo*/
         }
 
         h2 {
+            text-align: center;
+
             color: black;
             /* margin: 10px 10px 10px 10px; */
             /*Margen externo*/
@@ -43,7 +52,7 @@
 
         hr {
             background-color: black;
-            height:  2px;
+            height: 2px;
             border: none;
         }
 
@@ -51,16 +60,20 @@
 
 
         section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            /* overflow: hidden; */
             background-color: wheat;
             min-height: 100px;
+            width: 90%;
+            /* min-height: 200px; */
             margin: 10px 0px 10px 0px;
             border: 2px solid black;
-
-
+        }
+        .container{
+            width: 100%;
+           min-height: 100px;
+            background-color: whitesmoke;
+            /* border: 3px double b
+             */
         }
 
         .item {
@@ -69,23 +82,46 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            width: 20%;
-            height: 20px;
-            border: 3px double black;
+                       border: 3px double black;
             margin: 5px;
             background-image: url("./img/fondo.jpg");
             background-position: center;
             background-size: cover;
-            padding: 10px 10px 10px 10px;
+            padding: 10px 50px 10px 50px;
         }
 
+        .fila {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            overflow: hidden; /* Corta lo que sobrel sale de un div */
+        }
+
+        .filaWarp {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .filaReversa {
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            /* align-items: center;
+            justify-content: space-around; */
+
+        }
         .rowCenter {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            background-color: whitesmoke;
-            width: 100%;
 
         }
 
@@ -94,8 +130,6 @@
             flex-direction: row;
             align-items: center;
             justify-content: flex-start;
-            background-color: whitesmoke;
-            width: 100%;
         }
 
         .rowEnd {
@@ -103,44 +137,141 @@
             flex-direction: row;
             align-items: center;
             justify-content: flex-end;
-            background-color: whitesmoke;
-            width: 100%;
         }
+
         .spaceArround {
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-around;/* Con esto se puede centrar uno solo */
-            background-color: whitesmoke;
-            width: 100%;
+            justify-content: space-around;
+            /* Con esto se puede centrar uno solo */
         }
+
         .spaceBetwin {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            background-color: whitesmoke;
-            width: 100%;
         }
-        .column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            background-color: whitesmoke;
-            width: 100%;
 
-        }
+     
     </style>
 </head>
 
 <body>
     <h1>Display flex</h1>
+    <section>
+        <h2>Fila</h2>
+        <hr>
+        <div class="fila container">
+            <div class="item">
+                <h3>1</h3>
+            </div>
+            <div class="item">
+                <h3>2</h3>
+            </div>
+            <div class="item">
+                <h3>3</h3>
+            </div>
+            <div class="item">
+                <h3>4</h3>
+            </div>
+            <div class="item">
+                <h3>5</h3>
+            </div>
+            <div class="item">
+                <h3>6</h3>
+            </div>
+            <div class="item">
+                <h3>7</h3>
+            </div>
+            <div class="item">
+                <h3>8</h3>
+            </div>
+            <div class="item">
+                <h3>9</h3>
+            </div>
+            <div class="item">
+                <h3>10</h3>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Fila con rotura</h2>
+        <hr>
+        <div class="filaWarp container">
+            <div class="item">
+                <h3>1</h3>
+            </div>
+            <div class="item">
+                <h3>2</h3>
+            </div>
+            <div class="item">
+                <h3>3</h3>
+            </div>
+            <div class="item">
+                <h3>4</h3>
+            </div>
+            <div class="item">
+                <h3>5</h3>
+            </div>
+            <div class="item">
+                <h3>6</h3>
+            </div>
+            <div class="item">
+                <h3>7</h3>
+            </div>
+            <div class="item">
+                <h3>8</h3>
+            </div>
+            <div class="item">
+                <h3>9</h3>
+            </div>
+            <div class="item">
+                <h3>10</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <h2>Reversa</h2>
+        <hr>
+        <div class="filaReversa container">
+
+            <div class="item">
+                <h3>1</h3>
+            </div>
+            <div class="item">
+                <h3>2</h3>
+            </div>
+            <div class="item">
+                <h3>3</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <h2>Columna</h2>
+        <hr>
+        <div class="column container">
+
+            <div class="item">
+                <h3>1</h3>
+            </div>
+            <div class="item">
+                <h3>2</h3>
+            </div>
+            <div class="item">
+                <h3>3</h3>
+            </div>
+        </div>
+    </section>
 
     <section>
         <h2>Centrado</h2>
         <hr>
-        <div class="rowCenter">
+        <div class="rowCenter container">
             <div class="item">
                 <h3>1</h3>
             </div>
@@ -157,188 +288,65 @@
     <section class="">
         <h2>Centrado al inicio</h2>
         <hr>
-        <div class="rowStart">
-
-                <div class="item">
-            <h3>1</h3>
+        <div class="rowStart container">
+            <div class="item">
+                <h3>1</h3>
+            </div>
+            <div class="item">
+                <h3>2</h3>
+            </div>
+            <div class="item">
+                <h3>3</h3>
+            </div>
         </div>
-        <div class="item">
-            <h3>2</h3>
-        </div>
-        <div class="item">
-            <h3>3</h3>
-        </div>
-    </div>
-</section>
+    </section>
 
     <section class="">
         <h2>Centrado al final</h2>
         <hr>
-        <div class="rowEnd">
-
-                <div class="item">
-            <h3>1</h3>
-        </div>
-        <div class="item">
-            <h3>2</h3>
-        </div>
-        <div class="item">
-            <h3>3</h3>
-        </div>
-    </div>
-</section>
-
-<section class="">
-    <h2>Espacio alrrededor</h2>
-    <hr>
-    <div class="spaceArround">
+        <div class="rowEnd container">
 
             <div class="item">
-        <h3>1</h3>
-    </div>
-    <div class="item">
-        <h3>2</h3>
-    </div>
-    <div class="item">
-        <h3>3</h3>
-    </div>
-</div>
-</section>
-
-<section class="">
-    <h2>Espacio alrrededor</h2>
-    <hr>
-    <div class="spaceBetwin">
-
+                <h3>1</h3>
+            </div>
             <div class="item">
-        <h3>1</h3>
-    </div>
-    <div class="item">
-        <h3>2</h3>
-    </div>
-    <div class="item">
-        <h3>3</h3>
-    </div>
-</div>
-</section>
+                <h3>2</h3>
+            </div>
+            <div class="item">
+                <h3>3</h3>
+            </div>
+        </div>
+    </section>
 
     <section class="">
-        <h2>Columna</h2>
+        <h2>Espacio alrrededor</h2>
         <hr>
-        <div class="column">
+        <div class="spaceArround container">
 
-                <div class="item">
-            <h3>1</h3>
-        </div>
-        <div class="item">
-            <h3>2</h3>
-        </div>
-        <div class="item">
-            <h3>3</h3>
-        </div>
-    </div>
-</section>
+            <div class="item">
+                <h3>1</h3>
+            </div>
+            <div class="item">
+                <h3>2</h3>
+            </div>
 
-    <section class="seccionSegunda">
-        <h2>Centrado</h2>
-        <hr>        <div class="item">
-            <h3>1</h3>
-        </div>
-        <div class="item">
-            <h3>2</h3>
-        </div>
-        <div class="item">
-            <h3>3</h3>
-        </div>
-        <div class="item">
-            <h3>4</h3>
-        </div>
-        <div class="item">
-            <h3>5</h3>
-        </div>
-        <div class="item">
-            <h3>6</h3>
-        </div>
-        <div class="item">
-            <h3>7</h3>
-        </div>
-        <div class="item">
-            <h3>8</h3>
-        </div>
-        <div class="item">
-            <h3>9</h3>
-        </div>
-        <div class="item">
-            <h3>10</h3>
-        </div>
-    </section>
-    <section class="seccionSegunda">
-        <h2></h2>
-        <div class="item">
-            <h3>1</h3>
-        </div>
-        <div class="item">
-            <h3>2</h3>
-        </div>
-        <div class="item">
-            <h3>3</h3>
-        </div>
-        <div class="item">
-            <h3>4</h3>
-        </div>
-        <div class="item">
-            <h3>5</h3>
-        </div>
-        <div class="item">
-            <h3>6</h3>
-        </div>
-        <div class="item">
-            <h3>7</h3>
-        </div>
-        <div class="item">
-            <h3>8</h3>
-        </div>
-        <div class="item">
-            <h3>9</h3>
-        </div>
-        <div class="item">
-            <h3>10</h3>
-        </div>
-    </section>
-    <section class="seccionSegunda">
-        <h2></h2>
-        <div class="item">
-            <h3>1</h3>
-        </div>
-        <div class="item">
-            <h3>2</h3>
-        </div>
-        <div class="item">
-            <h3>3</h3>
-        </div>
-        <div class="item">
-            <h3>4</h3>
-        </div>
-        <div class="item">
-            <h3>5</h3>
-        </div>
-        <div class="item">
-            <h3>6</h3>
-        </div>
-        <div class="item">
-            <h3>7</h3>
-        </div>
-        <div class="item">
-            <h3>8</h3>
-        </div>
-        <div class="item">
-            <h3>9</h3>
-        </div>
-        <div class="item">
-            <h3>10</h3>
         </div>
     </section>
 
+    <section class="">
+        <h2>Espacio en medio</h2>
+        <hr>
+        <div class="spaceBetwin container">
+
+            <div class="item">
+                <h3>1</h3>
+            </div>
+            <div class="item">
+                <h3>2</h3>
+            </div>
+
+        </div>
+    </section>
     <a href="html4.html">Clase 3</a>
 </body>
 
